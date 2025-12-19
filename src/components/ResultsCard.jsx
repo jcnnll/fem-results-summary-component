@@ -42,7 +42,10 @@ const ResultsCard = () => {
               className={`result-item ${getCategoryClass(item.category)}`}
             >
               <div className="icon-category">
-                <img src={item.icon} alt="" aria-hidden="true" />
+                <img
+                  src={`${import.meta.env.BASE_URL}${item.icon.slice(1)}`}
+                  alt={`${item.category} icon`}
+                />
                 <span className="category">{item.category}</span>
               </div>
 
