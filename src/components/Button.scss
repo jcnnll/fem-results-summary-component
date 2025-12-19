@@ -1,0 +1,27 @@
+@use "../styles/variables" as *;
+
+.button {
+  padding: 0.9rem 2rem;
+  background-color: $color-dark-gray-blue;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(
+      0deg,
+      $gradient-light-royal-blue,
+      $gradient-light-slate-blue
+    );
+  }
+
+  &:disabled {
+    background-color: lighten($color-dark-gray-blue, 50%);
+    cursor: not-allowed;
+  }
+}
